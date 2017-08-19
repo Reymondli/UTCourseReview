@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		723AD5701F3D60660007D712 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AD56F1F3D60660007D712 /* AppDelegate.swift */; };
-		723AD5721F3D60660007D712 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AD5711F3D60660007D712 /* ViewController.swift */; };
+		723AD5721F3D60660007D712 /* CourseSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AD5711F3D60660007D712 /* CourseSearchViewController.swift */; };
 		723AD5751F3D60660007D712 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723AD5731F3D60660007D712 /* Main.storyboard */; };
 		723AD5771F3D60660007D712 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723AD5761F3D60660007D712 /* Assets.xcassets */; };
 		723AD57A1F3D60660007D712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 723AD5781F3D60660007D712 /* LaunchScreen.storyboard */; };
 		723AD5851F3D60660007D712 /* UofTCourseReviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AD5841F3D60660007D712 /* UofTCourseReviewTests.swift */; };
 		723AD5901F3D60660007D712 /* UofTCourseReviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AD58F1F3D60660007D712 /* UofTCourseReviewUITests.swift */; };
+		723AD5A21F3D619A0007D712 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AD5A11F3D619A0007D712 /* CoreDataStack.swift */; };
+		723AD5A41F3D6BF10007D712 /* FavoriteCourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723AD5A31F3D6BF10007D712 /* FavoriteCourseTableViewController.swift */; };
+		72C9CB631F3FF5150077EB94 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB621F3FF5150077EB94 /* Constants.swift */; };
+		72C9CB651F41502F0077EB94 /* UTCRClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB641F41502F0077EB94 /* UTCRClient.swift */; };
+		72C9CB671F4153DC0077EB94 /* CourseReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB661F4153DC0077EB94 /* CourseReviewViewController.swift */; };
+		72C9CB6A1F4159D60077EB94 /* Course.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB681F4159D60077EB94 /* Course.xcdatamodeld */; };
+		72C9CB6D1F415B920077EB94 /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB6B1F415B920077EB94 /* Course+CoreDataClass.swift */; };
+		72C9CB6E1F415B920077EB94 /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB6C1F415B920077EB94 /* Course+CoreDataProperties.swift */; };
+		72C9CB701F427E080077EB94 /* UTCRConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB6F1F427E080077EB94 /* UTCRConvenience.swift */; };
+		72C9CB721F429D2E0077EB94 /* UIConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB711F429D2E0077EB94 /* UIConvenience.swift */; };
+		72C9CB741F44BF160077EB94 /* AutoCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB731F44BF160077EB94 /* AutoCompleteViewController.swift */; };
+		72C9CB761F45FDF50077EB94 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB751F45FDF50077EB94 /* DetailViewController.swift */; };
+		72C9CB781F462ED70077EB94 /* AddNewReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB771F462ED70077EB94 /* AddNewReviewController.swift */; };
+		72C9CB7A1F4679800077EB94 /* UTCRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB791F4679800077EB94 /* UTCRData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +49,8 @@
 
 /* Begin PBXFileReference section */
 		723AD56C1F3D60660007D712 /* UofTCourseReview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UofTCourseReview.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		723AD56F1F3D60660007D712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		723AD5711F3D60660007D712 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		723AD56F1F3D60660007D712 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = UofTCourseReview/AppDelegate.swift; sourceTree = "<group>"; };
+		723AD5711F3D60660007D712 /* CourseSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseSearchViewController.swift; sourceTree = "<group>"; };
 		723AD5741F3D60660007D712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		723AD5761F3D60660007D712 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		723AD5791F3D60660007D712 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +61,20 @@
 		723AD58B1F3D60660007D712 /* UofTCourseReviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UofTCourseReviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		723AD58F1F3D60660007D712 /* UofTCourseReviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UofTCourseReviewUITests.swift; sourceTree = "<group>"; };
 		723AD5911F3D60660007D712 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		723AD5A11F3D619A0007D712 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		723AD5A31F3D6BF10007D712 /* FavoriteCourseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCourseTableViewController.swift; sourceTree = "<group>"; };
+		72C9CB621F3FF5150077EB94 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		72C9CB641F41502F0077EB94 /* UTCRClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTCRClient.swift; sourceTree = "<group>"; };
+		72C9CB661F4153DC0077EB94 /* CourseReviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseReviewViewController.swift; sourceTree = "<group>"; };
+		72C9CB691F4159D60077EB94 /* Course.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Course.xcdatamodel; sourceTree = "<group>"; };
+		72C9CB6B1F415B920077EB94 /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataClass.swift"; path = "../Course+CoreDataClass.swift"; sourceTree = "<group>"; };
+		72C9CB6C1F415B920077EB94 /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Course+CoreDataProperties.swift"; path = "../Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		72C9CB6F1F427E080077EB94 /* UTCRConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTCRConvenience.swift; sourceTree = "<group>"; };
+		72C9CB711F429D2E0077EB94 /* UIConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConvenience.swift; sourceTree = "<group>"; };
+		72C9CB731F44BF160077EB94 /* AutoCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteViewController.swift; sourceTree = "<group>"; };
+		72C9CB751F45FDF50077EB94 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		72C9CB771F462ED70077EB94 /* AddNewReviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewReviewController.swift; sourceTree = "<group>"; };
+		72C9CB791F4679800077EB94 /* UTCRData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTCRData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +105,9 @@
 		723AD5631F3D60660007D712 = {
 			isa = PBXGroup;
 			children = (
+				72C9CB791F4679800077EB94 /* UTCRData.swift */,
+				72C9CB711F429D2E0077EB94 /* UIConvenience.swift */,
+				723AD56F1F3D60660007D712 /* AppDelegate.swift */,
 				723AD56E1F3D60660007D712 /* UofTCourseReview */,
 				723AD5831F3D60660007D712 /* UofTCourseReviewTests */,
 				723AD58E1F3D60660007D712 /* UofTCourseReviewUITests */,
@@ -97,8 +128,8 @@
 		723AD56E1F3D60660007D712 /* UofTCourseReview */ = {
 			isa = PBXGroup;
 			children = (
-				723AD56F1F3D60660007D712 /* AppDelegate.swift */,
-				723AD5711F3D60660007D712 /* ViewController.swift */,
+				723AD59D1F3D61340007D712 /* Model */,
+				723AD59E1F3D613C0007D712 /* Controller */,
 				723AD5731F3D60660007D712 /* Main.storyboard */,
 				723AD5761F3D60660007D712 /* Assets.xcassets */,
 				723AD5781F3D60660007D712 /* LaunchScreen.storyboard */,
@@ -123,6 +154,49 @@
 				723AD5911F3D60660007D712 /* Info.plist */,
 			);
 			path = UofTCourseReviewUITests;
+			sourceTree = "<group>";
+		};
+		723AD59D1F3D61340007D712 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				723AD5A01F3D61560007D712 /* CoreData */,
+				723AD59F1F3D61480007D712 /* UTCR */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		723AD59E1F3D613C0007D712 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				723AD5711F3D60660007D712 /* CourseSearchViewController.swift */,
+				723AD5A31F3D6BF10007D712 /* FavoriteCourseTableViewController.swift */,
+				72C9CB661F4153DC0077EB94 /* CourseReviewViewController.swift */,
+				72C9CB731F44BF160077EB94 /* AutoCompleteViewController.swift */,
+				72C9CB751F45FDF50077EB94 /* DetailViewController.swift */,
+				72C9CB771F462ED70077EB94 /* AddNewReviewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		723AD59F1F3D61480007D712 /* UTCR */ = {
+			isa = PBXGroup;
+			children = (
+				72C9CB641F41502F0077EB94 /* UTCRClient.swift */,
+				72C9CB621F3FF5150077EB94 /* Constants.swift */,
+				72C9CB6F1F427E080077EB94 /* UTCRConvenience.swift */,
+			);
+			name = UTCR;
+			sourceTree = "<group>";
+		};
+		723AD5A01F3D61560007D712 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				72C9CB6B1F415B920077EB94 /* Course+CoreDataClass.swift */,
+				72C9CB6C1F415B920077EB94 /* Course+CoreDataProperties.swift */,
+				723AD5A11F3D619A0007D712 /* CoreDataStack.swift */,
+				72C9CB681F4159D60077EB94 /* Course.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +336,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				723AD5721F3D60660007D712 /* ViewController.swift in Sources */,
+				72C9CB6D1F415B920077EB94 /* Course+CoreDataClass.swift in Sources */,
+				72C9CB7A1F4679800077EB94 /* UTCRData.swift in Sources */,
+				72C9CB721F429D2E0077EB94 /* UIConvenience.swift in Sources */,
+				72C9CB651F41502F0077EB94 /* UTCRClient.swift in Sources */,
+				72C9CB631F3FF5150077EB94 /* Constants.swift in Sources */,
+				723AD5A21F3D619A0007D712 /* CoreDataStack.swift in Sources */,
+				72C9CB701F427E080077EB94 /* UTCRConvenience.swift in Sources */,
+				72C9CB781F462ED70077EB94 /* AddNewReviewController.swift in Sources */,
+				723AD5721F3D60660007D712 /* CourseSearchViewController.swift in Sources */,
+				72C9CB6A1F4159D60077EB94 /* Course.xcdatamodeld in Sources */,
+				72C9CB6E1F415B920077EB94 /* Course+CoreDataProperties.swift in Sources */,
+				723AD5A41F3D6BF10007D712 /* FavoriteCourseTableViewController.swift in Sources */,
+				72C9CB671F4153DC0077EB94 /* CourseReviewViewController.swift in Sources */,
 				723AD5701F3D60660007D712 /* AppDelegate.swift in Sources */,
+				72C9CB741F44BF160077EB94 /* AutoCompleteViewController.swift in Sources */,
+				72C9CB761F45FDF50077EB94 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +604,7 @@
 				723AD5961F3D60660007D712 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		723AD5971F3D60660007D712 /* Build configuration list for PBXNativeTarget "UofTCourseReviewTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +613,7 @@
 				723AD5991F3D60660007D712 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		723AD59A1F3D60660007D712 /* Build configuration list for PBXNativeTarget "UofTCourseReviewUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,8 +622,22 @@
 				723AD59C1F3D60660007D712 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		72C9CB681F4159D60077EB94 /* Course.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				72C9CB691F4159D60077EB94 /* Course.xcdatamodel */,
+			);
+			currentVersion = 72C9CB691F4159D60077EB94 /* Course.xcdatamodel */;
+			path = Course.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 723AD5641F3D60660007D712 /* Project object */;
 }
