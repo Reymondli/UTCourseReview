@@ -28,6 +28,7 @@
 		72C9CB761F45FDF50077EB94 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB751F45FDF50077EB94 /* DetailViewController.swift */; };
 		72C9CB781F462ED70077EB94 /* AddNewReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB771F462ED70077EB94 /* AddNewReviewController.swift */; };
 		72C9CB7A1F4679800077EB94 /* UTCRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB791F4679800077EB94 /* UTCRData.swift */; };
+		72E70BE71F48BEE800DCEB08 /* AddNewReviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E70BE61F48BEE800DCEB08 /* AddNewReviewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		72C9CB751F45FDF50077EB94 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		72C9CB771F462ED70077EB94 /* AddNewReviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewReviewController.swift; sourceTree = "<group>"; };
 		72C9CB791F4679800077EB94 /* UTCRData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTCRData.swift; sourceTree = "<group>"; };
+		72E70BE61F48BEE800DCEB08 /* AddNewReviewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewReviewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				72C9CB731F44BF160077EB94 /* AutoCompleteViewController.swift */,
 				72C9CB751F45FDF50077EB94 /* DetailViewController.swift */,
 				72C9CB771F462ED70077EB94 /* AddNewReviewController.swift */,
+				72E70BE61F48BEE800DCEB08 /* AddNewReviewExtension.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				723AD5A41F3D6BF10007D712 /* FavoriteCourseTableViewController.swift in Sources */,
 				72C9CB671F4153DC0077EB94 /* CourseReviewViewController.swift in Sources */,
 				723AD5701F3D60660007D712 /* AppDelegate.swift in Sources */,
+				72E70BE71F48BEE800DCEB08 /* AddNewReviewExtension.swift in Sources */,
 				72C9CB741F44BF160077EB94 /* AutoCompleteViewController.swift in Sources */,
 				72C9CB761F45FDF50077EB94 /* DetailViewController.swift in Sources */,
 			);

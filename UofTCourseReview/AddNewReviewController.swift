@@ -20,12 +20,25 @@ class AddNewReviewController: UIViewController {
     
     // MARK: Properties
     var courseTitle: String!
-    
+    var yearList = [Int]()
+    var yearMin = 2007
+    let ratingList = [5,4,3,2,1]
+
     // MARK: Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         courseTitleLabel.text = courseTitle
         configDelegate()
+        
+        // Config UIPickerView
+        createYearPicker()
+        createRatePicker()
+        createToolbar()
+        
+        while yearMin <= CurrentYear() {
+            yearList.append(yearMin)
+            yearMin = yearMin + 1
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -128,10 +141,5 @@ extension AddNewReviewController {
 extension AddNewReviewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = ""
-    }
-    
-    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
-        textView.resignFirstResponder()
-        return true
     }
 }
