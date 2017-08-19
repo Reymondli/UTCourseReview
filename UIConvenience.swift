@@ -32,6 +32,16 @@ extension UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func turnOnIndicator(Indicator: UIActivityIndicatorView, turnOn: Bool) {
+        if turnOn {
+            Indicator.isHidden = false
+            Indicator.startAnimating()
+        } else {
+            Indicator.stopAnimating()
+            Indicator.isHidden = true
+        }
+    }
 }
 
 extension UIViewController: UITextFieldDelegate {

@@ -12,18 +12,19 @@ class CourseSearchViewController: UIViewController {
 
     // MARK: Outlets
     @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var searchIndicator: UIActivityIndicatorView!
 
     
     // MARK: Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        searchField.delegate = self
-        searchField.text = "Enter Course Code Here"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        searchField.delegate = self
+        searchField.text = "Enter Course Code Here"
+        turnOnIndicator(Indicator: searchIndicator, turnOn: false)
         subscribeToKeyboardNotifications()
         print("Im Back!")
     }
@@ -40,21 +41,24 @@ class CourseSearchViewController: UIViewController {
 
     // MARK: Search Pressed
     @IBAction func searchPressed(_ sender: Any) {
+        turnOnIndicator(Indicator: searchIndicator, turnOn: true)
         guard searchField.text!.isEmpty == false && searchField.text != "Enter Course Code Here" else {
+            turnOnIndicator(Indicator: searchIndicator, turnOn: false)
             displayAlert(message: "Course Code cannot be Empty", title: "Wait a Minute")
             return
         }
-        
         let partialName = searchField.text
 
         UTCRClient.sharedInstance.getAutoCompleteCourse(partialName: partialName!){ (searchArray, error) in
             // Always Dealing with UI on Main Thread
             DispatchQueue.main.async {
                 guard error == nil else {
+                    self.turnOnIndicator(Indicator: self.searchIndicator, turnOn: false)
                     self.displayAlert(message: error!, title: "Search Failed!")
                     return
                 }
                 // print(searchArray!)
+                self.turnOnIndicator(Indicator: self.searchIndicator, turnOn: false)
                 let autocontroller = self.storyboard?.instantiateViewController(withIdentifier: "autocomplete") as! AutoCompleteViewController
                 autocontroller.courseList = searchArray!
                 autocontroller.title = "Search Result"

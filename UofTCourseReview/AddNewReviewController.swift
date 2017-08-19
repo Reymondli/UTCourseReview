@@ -17,6 +17,7 @@ class AddNewReviewController: UIViewController {
     @IBOutlet weak var usefulTextField: UITextField!
     @IBOutlet weak var interestTextField: UITextField!
     @IBOutlet weak var commentTextView: UITextView!
+    @IBOutlet weak var postIndicator: UIActivityIndicatorView!
     
     // MARK: Properties
     var courseTitle: String!
@@ -27,6 +28,7 @@ class AddNewReviewController: UIViewController {
     // MARK: Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        turnOnIndicator(Indicator: postIndicator, turnOn: false)
         courseTitleLabel.text = courseTitle
         configDelegate()
         
@@ -53,15 +55,17 @@ class AddNewReviewController: UIViewController {
     
     // MARK: Actions
     @IBAction func submitPressed(_ sender: Any) {
-        
+        turnOnIndicator(Indicator: postIndicator, turnOn: true)
         // Check Any Empty Field
         if checkEmpty(textField: profTextField) || checkEmpty(textField: yearTextField) || checkEmpty(textField: hardTextField) || checkEmpty(textField: usefulTextField) || checkEmpty(textField: interestTextField) || commentTextView.text.isEmpty {
+            turnOnIndicator(Indicator: postIndicator, turnOn: false)
             displayAlert(message: "Please Enter All Fields before Submit", title: "Wait a Second...")
             return
         }
         
         // Check Year
         if Int(yearTextField.text!)! < 2007 || Int(yearTextField.text!)! > CurrentYear() {
+            turnOnIndicator(Indicator: postIndicator, turnOn: false)
             displayAlert(message: "Year later than 2007 and no more than current year", title: "Invalid Year")
             return
         }
@@ -81,15 +85,20 @@ class AddNewReviewController: UIViewController {
             UTCRClient.sharedInstance.postCourseReview(JSONBody: jsonbody) { (success, error) in
                 DispatchQueue.main.async {
                     if success! {
+                        self.postIndicator.stopAnimating()
+                        self.postIndicator.isHidden = true
                         self.successAlert(message: "Review Posted", title: "Success!")
                         return
                     } else {
+                        self.postIndicator.stopAnimating()
+                        self.postIndicator.isHidden = true
                         self.displayAlert(message: "\(error!)", title: "Submit Failure!")
                         return
                     }
                 }
             }
         } else {
+            turnOnIndicator(Indicator: postIndicator, turnOn: false)
             displayAlert(message: "Rating Value(s) should be Integer(s) from 1 -> 5", title: "Invalid Rating Value(s)")
             return
         }
@@ -140,6 +149,8 @@ extension AddNewReviewController {
 
 extension AddNewReviewController: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
-        textView.text = ""
+        if textView.text == "Please leave your comment about this course here." {
+            textView.text = ""
+        }
     }
 }
