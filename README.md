@@ -69,9 +69,11 @@ At any time of search period (step 1 -> Step 3), user can always go to Favorite 
 ![Alt text](/Screenshots/IMG_0028.PNG?raw=true "Course Review Page")
 
 ## Credit
-UTCR iOS App is designed and developed by Rey Li.
-This app uses API from UTCR website, designed and developed by Rick Jia. Data from Cobalt UofT.
-More detail of UTCR website can be found here: https://github.com/ruihan-jia/UofTCourseReview
+UTCR iOS App is designed and developed by Ziming Li.
+
+This app uses API from UTCR website. (website designed and developed by Rick Jia. Data from Cobalt UofT.)
+
+More details of UTCR website can be found here: https://github.com/ruihan-jia/UofTCourseReview
 
 
 
