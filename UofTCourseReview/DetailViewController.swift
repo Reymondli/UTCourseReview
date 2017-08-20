@@ -30,13 +30,6 @@ class DetailViewController: UIViewController {
         loadDetail(detailReview: detailArray)
     }
     
-    // MARK: Done Button Pressed
-    /* No Longer Needed as UI Navigation Controller has been used
-    @IBAction func donePressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    */
-    
     func loadDetail(detailReview: [String: AnyObject]) {
         guard let year = detailReview["year"], let prof = detailReview["prof"], let hard = detailReview["hard"], let useful = detailReview["useful"], let interest = detailReview["interest"], let comment = detailReview["comment"], let date = detailReview["updated_at"] else {
             displayAlert(message: "Failed to Load Detail Review", title: "Error")

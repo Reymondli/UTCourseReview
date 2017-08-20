@@ -21,14 +21,14 @@ class AddNewReviewController: UIViewController {
     
     // MARK: Properties
     var courseTitle: String!
-    var yearList = [Int]()
+    var yearList = [String]()
     var yearMin = 2007
-    let ratingList = [5,4,3,2,1]
+    let ratingList = ["","5","4","3","2","1"]
 
     // MARK: Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        turnOnIndicator(Indicator: postIndicator, turnOn: false)
+        postIndicator.isHidden = true
         courseTitleLabel.text = courseTitle
         configDelegate()
         
@@ -38,19 +38,10 @@ class AddNewReviewController: UIViewController {
         createToolbar()
         
         while yearMin <= CurrentYear() {
-            yearList.append(yearMin)
+            yearList.append(String(yearMin))
             yearMin = yearMin + 1
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //subscribeToKeyboardNotifications()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        //unsubscribeFromKeyboardNotifications()
+        yearList.append("")
     }
     
     // MARK: Actions
@@ -85,13 +76,11 @@ class AddNewReviewController: UIViewController {
             UTCRClient.sharedInstance.postCourseReview(JSONBody: jsonbody) { (success, error) in
                 DispatchQueue.main.async {
                     if success! {
-                        self.postIndicator.stopAnimating()
-                        self.postIndicator.isHidden = true
+                        self.turnOnIndicator(Indicator: self.postIndicator, turnOn: false)
                         self.successAlert(message: "Review Posted", title: "Success!")
                         return
                     } else {
-                        self.postIndicator.stopAnimating()
-                        self.postIndicator.isHidden = true
+                        self.turnOnIndicator(Indicator: self.postIndicator, turnOn: false)
                         self.displayAlert(message: "\(error!)", title: "Submit Failure!")
                         return
                     }
@@ -103,12 +92,6 @@ class AddNewReviewController: UIViewController {
             return
         }
     }
-    
-    
-    @IBAction func cancelPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
 }
 
 extension AddNewReviewController {

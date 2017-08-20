@@ -17,6 +17,8 @@ class CourseReviewViewController: UIViewController {
     @IBOutlet weak var noCommentLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var newCommentButton: UIButton!
+    @IBOutlet weak var loadReviewIndicator: UIActivityIndicatorView!
+    
     
     // MARK: Properties
     var completeCourseId: String!
@@ -30,6 +32,7 @@ class CourseReviewViewController: UIViewController {
     // MARK: Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        turnOnIndicator(Indicator: loadReviewIndicator, turnOn: false)
         UTCRData.sharedInstance.courseId = completeCourseId
     }
     
@@ -38,14 +41,6 @@ class CourseReviewViewController: UIViewController {
         tableView.isHidden = false
         getReviews(courseCode: UTCRData.sharedInstance.courseId!)
     }
-    
-    // MARK: Buttons
-    /* No Longer Needed as Navigation Controller has been used
-    @IBAction func cancelPressed(_ sender: Any) {
-        // Unwind Segue to Search Page
-        self.performSegue(withIdentifier: "MainController", sender: self)
-    }
-    */
     
     @IBAction func addToFavorite(_ sender: Any) {
         // Add new course to Favorite... and Core Data takes care of the rest!
@@ -65,31 +60,32 @@ class CourseReviewViewController: UIViewController {
     @IBAction func addReviewPressed(_ sender: Any) {
         let addreviewcontroller = self.storyboard?.instantiateViewController(withIdentifier: "addreview") as! AddNewReviewController
         addreviewcontroller.courseTitle = self.completeCourseId
-        //self.present(addreviewcontroller, animated: true, completion: nil)
         self.navigationController?.pushViewController(addreviewcontroller, animated: true)
     }
     
     func getReviews(courseCode: String) {
+        turnOnIndicator(Indicator: loadReviewIndicator, turnOn: true)
         UTCRClient.sharedInstance.getCourseReview(courseCode: completeCourseId) { (infoDict, ratingDict, reviewsArray, error) in
             DispatchQueue.main.async {
                 guard error == nil else {
+                    self.turnOnIndicator(Indicator: self.loadReviewIndicator, turnOn: false)
                     self.displayAlert(message: error!, title: "Getting Review Failed!")
                     return
                 }
                 
                 guard let _ = infoDict?["code"], let name = infoDict?["name"], let desc = infoDict?["description"] else {
+                    self.turnOnIndicator(Indicator: self.loadReviewIndicator, turnOn: false)
                     self.displayAlert(message: "Failed to Load Course Info", title: "Error")
                     return
                 }
                 
                 guard let hard = ratingDict?["hard"], let useful = ratingDict?["useful"], let interest = ratingDict?["interest"] else {
+                    self.turnOnIndicator(Indicator: self.loadReviewIndicator, turnOn: false)
                     self.displayAlert(message: "Failed to Get Course Rating", title: "Error")
                     return
                 }
                 self.courseName = (name as! String)
-                //self.courseLabel.text = (code as! String) + " - " + (name as! String)
                 self.courseLabel.text = (name as! String)
-                //self.descriptionView.text = "\(desc as! String)"
                 self.descriptionView.text = "\(desc as! String) \n\n" + "Hardness: \(Double(hard as! String)!.roundToDecimal(2)) \n" + "Usefulness: \(Double(useful as! String)!.roundToDecimal(2)) \n" + "Interest: \(Double(interest as! String)!.roundToDecimal(2))"
                 if (reviewsArray?.count)! > 0 {
                     self.reviewsList = reviewsArray!
@@ -98,6 +94,7 @@ class CourseReviewViewController: UIViewController {
                     self.noCommentLabel.isHidden = false
                 }
                 self.tableView.reloadData()
+                self.turnOnIndicator(Indicator: self.loadReviewIndicator, turnOn: false)
             }
         }
     }
@@ -123,7 +120,6 @@ extension CourseReviewViewController: UITableViewDelegate, UITableViewDataSource
         // Launch Detail View Page of Selected Comment Row
         let detailcontroller = self.storyboard?.instantiateViewController(withIdentifier: "detailview") as! DetailViewController
         detailcontroller.detailArray = self.reviewsList[indexPath.row]
-        // self.present(detailcontroller, animated: true, completion: nil)
         self.navigationController?.pushViewController(detailcontroller, animated: true)
     }
 }

@@ -29,9 +29,11 @@ extension AddNewReviewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         if pickerView.tag == 1{
-            return String(yearList.reversed()[row])
+            let content = yearList.reversed()[row]
+            return content
         } else {
-            return String(ratingList[row])
+            let content = ratingList[row]
+            return content
         }
         
     }
@@ -39,13 +41,13 @@ extension AddNewReviewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 1 {
-            yearTextField.text = String(yearList.reversed()[row])
+            yearTextField.text = yearList.reversed()[row]
         } else if pickerView.tag == 2 {
-            hardTextField.text = String(ratingList[row])
+            hardTextField.text = ratingList[row]
         } else if pickerView.tag == 3 {
-            usefulTextField.text = String(ratingList[row])
+            usefulTextField.text = ratingList[row]
         } else if pickerView.tag == 4 {
-            interestTextField.text = String(ratingList[row])
+            interestTextField.text = ratingList[row]
         }
     }
 }

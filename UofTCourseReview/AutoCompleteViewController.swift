@@ -20,17 +20,7 @@ class AutoCompleteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.reloadData()
-        // print(courseList)
-
     }
-    
-    // MARK: Cancel Button Pressed
-    /*
-    @IBAction func cancelPressed(_ sender: Any) {
-        // Brings user back to front
-        dismiss(animated: true, completion: nil)
-    }
-    */
 }
 
 extension AutoCompleteViewController: UITableViewDelegate, UITableViewDataSource {
@@ -54,7 +44,6 @@ extension AutoCompleteViewController: UITableViewDelegate, UITableViewDataSource
         reviewcontroller.courseName = self.courseList[indexPath.row]["name"]
         reviewcontroller.title = self.courseList[indexPath.row]["_id"]
         navigationController?.pushViewController(reviewcontroller, animated: true)
-        //self.present(reviewcontroller, animated: true, completion: nil)
     }
 
 }
