@@ -64,22 +64,26 @@ class CourseReviewViewController: UIViewController {
     }
     
     func getReviews(courseCode: String) {
+        print("Turn On Load Review Indicator")
         turnOnIndicator(Indicator: loadReviewIndicator, turnOn: true)
         UTCRClient.sharedInstance.getCourseReview(courseCode: completeCourseId) { (infoDict, ratingDict, reviewsArray, error) in
             DispatchQueue.main.async {
                 guard error == nil else {
+                    print("Turn Off Load Review Indicator")
                     self.turnOnIndicator(Indicator: self.loadReviewIndicator, turnOn: false)
                     self.displayAlert(message: error!, title: "Getting Review Failed!")
                     return
                 }
                 
                 guard let _ = infoDict?["code"], let name = infoDict?["name"], let desc = infoDict?["description"] else {
+                    print("Turn Off Load Review Indicator")
                     self.turnOnIndicator(Indicator: self.loadReviewIndicator, turnOn: false)
                     self.displayAlert(message: "Failed to Load Course Info", title: "Error")
                     return
                 }
                 
                 guard let hard = ratingDict?["hard"], let useful = ratingDict?["useful"], let interest = ratingDict?["interest"] else {
+                    print("Turn Off Load Review Indicator")
                     self.turnOnIndicator(Indicator: self.loadReviewIndicator, turnOn: false)
                     self.displayAlert(message: "Failed to Get Course Rating", title: "Error")
                     return
@@ -94,6 +98,7 @@ class CourseReviewViewController: UIViewController {
                     self.noCommentLabel.isHidden = false
                 }
                 self.tableView.reloadData()
+                print("Turn Off Load Review Indicator")
                 self.turnOnIndicator(Indicator: self.loadReviewIndicator, turnOn: false)
             }
         }
