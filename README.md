@@ -17,7 +17,7 @@ Device: All device running iOS 10.3
 ## Downloading and Installation
 Simply download this project (https://github.com/Reymondli/UTCourseReview) and open "UofTCourseReview.xcodeproj" using Xcode 8 or later version.
 
-For running on Simulator and/or iOS Device:
+### For running on Simulator and/or iOS Device:
 To run UTCR in Simulator, choose an iOS simulator (e.g. iPhone 7 Plus, iPad Air, or iPhone 6) or your connected iOS device from the Xcode scheme pop-up menu, and click Run. Xcode builds the project and then launches the most recent version of the app running in Simulator on your Mac screen
 
 ## Function Detail
@@ -45,14 +45,14 @@ For any course that has comment(s) posted by others, user can click on these com
 If user has already taken the course or has some idea about the course, he/she can add new comment for the course, by selecting "New Comment" button from Course Review Page (Step 3). 
 Once clicked, user will be brought to Add Review Page. There are 6 fields that user MUST provided in order to submit the review: Professor Name, Year of taken, Hardness, Useful, Interest, Comment. Once all fields are filled, simply click "Submit" button to submit.
 
-### Note: as a protection mechanism on UTCR Website, user from each IP can only submit ONE review to a course. Second time of review post won't be allowed.
+#### Note: as a protection mechanism on UTCR Website, user from each IP can only submit ONE review to a course. Second time of review post won't be allowed.
 
 ### Step 3.3: Click on Favorite Button
 From course review page (Step 3), user can add this course to favorite list, simply click the "Favorite" button. Once completed, "Favorite" button will be disabled for this course.
 
-## Step 4: Favorite Tab
+### Step 4: Favorite Tab
 At any time of search period (step 1 -> Step 3), user can always go to Favorite Tab and check what's been saved to their local device. The each row of favorite list contains complete course code and course name. If user no longer need a course and wish to remove it from the favorite list, simply swipe to delete.
-### Note: Course saved in Favorite Tab are presist data, meaning it won't be cleared when user closed the app or device shut down. However, data will disappear if user uninstalled and reinstall the app on device. (Or Clean and Re-build the app on simulator)
+#### Note: Course saved in Favorite Tab are presist data, meaning it won't be cleared when user closed the app or device shut down. However, data will disappear if user uninstalled and reinstall the app on device. (Or Clean and Re-build the app on simulator)
 
 ## Credit
 UTCR iOS App is designed and developed by Rey Li.
