@@ -29,6 +29,7 @@
 		72C9CB781F462ED70077EB94 /* AddNewReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB771F462ED70077EB94 /* AddNewReviewController.swift */; };
 		72C9CB7A1F4679800077EB94 /* UTCRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C9CB791F4679800077EB94 /* UTCRData.swift */; };
 		72E70BE71F48BEE800DCEB08 /* AddNewReviewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E70BE61F48BEE800DCEB08 /* AddNewReviewExtension.swift */; };
+		72E70BE91F49330800DCEB08 /* Screenshots in Resources */ = {isa = PBXBuildFile; fileRef = 72E70BE81F49330800DCEB08 /* Screenshots */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		72C9CB771F462ED70077EB94 /* AddNewReviewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewReviewController.swift; sourceTree = "<group>"; };
 		72C9CB791F4679800077EB94 /* UTCRData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UTCRData.swift; sourceTree = "<group>"; };
 		72E70BE61F48BEE800DCEB08 /* AddNewReviewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewReviewExtension.swift; sourceTree = "<group>"; };
+		72E70BE81F49330800DCEB08 /* Screenshots */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Screenshots; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		723AD5631F3D60660007D712 = {
 			isa = PBXGroup;
 			children = (
+				72E70BE81F49330800DCEB08 /* Screenshots */,
 				72C9CB791F4679800077EB94 /* UTCRData.swift */,
 				72C9CB711F429D2E0077EB94 /* UIConvenience.swift */,
 				723AD56F1F3D60660007D712 /* AppDelegate.swift */,
@@ -312,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72E70BE91F49330800DCEB08 /* Screenshots in Resources */,
 				723AD57A1F3D60660007D712 /* LaunchScreen.storyboard in Resources */,
 				723AD5771F3D60660007D712 /* Assets.xcassets in Resources */,
 				723AD5751F3D60660007D712 /* Main.storyboard in Resources */,
