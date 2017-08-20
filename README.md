@@ -10,8 +10,11 @@ For this iOS App, student can further add/remove courses into/from their favorit
 
 ## Development Environment
 Mac OS X Sierra
+
 IDE: Xcode 8
+
 Language: Swift 3
+
 Device: All device running iOS 10.3
 
 ## Downloading and Installation
