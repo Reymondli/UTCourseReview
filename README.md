@@ -53,7 +53,7 @@ Once clicked, user will be brought to Add Review Page. There are 6 fields that u
 ### Step 3.3: Click on Favorite Button
 From course review page (Step 3), user can add this course to favorite list, simply click the "Favorite" button. Once completed, "Favorite" button will be disabled for this course.
 
-### Step 4: Favorite Tab
+### Favorite Tab
 At any time of search period (step 1 -> Step 3), user can always go to Favorite Tab and check what's been saved to their local device. The each row of favorite list contains complete course code and course name. If user no longer need a course and wish to remove it from the favorite list, simply swipe to delete.
 #### Note: Course saved in Favorite Tab are presist data, meaning it won't be cleared when user closed the app or device shut down. However, data will disappear if user uninstalled and reinstall the app on device. (Or Clean and Re-build the app on simulator)
 
