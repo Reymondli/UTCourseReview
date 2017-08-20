@@ -34,12 +34,16 @@ More course can be found here: https://fas.calendar.utoronto.ca
 and here: https://portal.engineering.utoronto.ca/sites/calendars/current/Course_Descriptions.html
 
 Users will get error when they try to search for invalid course code and/or no network connection or leave textfield blank, etc.
+![Alt text](/Screenshots/IMG_0021.PNG?raw=true "Search Page")
+![Alt text](/Screenshots/IMG_0023.PNG?raw=true "Search Result Page")
 
 ### Step 2: Search Result Page:
 After user type either part of course code or complete code and click search (without getting an error), he will be directed into Search Result Page. This page shows any matching result(s) based on user's search. For example, if user typed ECE1 in Step 1, search result page will show him list of courses containing "ECE1", e.g. ECE110H1S, ECE101H1S, etc. User can simply select the row they want to view course review, or click "Back" button on top left corner and re-do Step 1.
 
 ### Step 3: Course Review Page:
 Upon selection of course, the detail of this course will be displayed in Course Review Page. The page contains: Complete Course Code in title, course name and description and average ratings in textView, "Favorite" button for saving the course to favorite list,"New Comment" button for adding a review for the course, and a list view of comments submitted by others.
+
+![Alt text](/Screenshots/IMG_0024.PNG?raw=true "Course Review Page")
 
 ### Step 3.1: Click on a comment
 For any course that has comment(s) posted by others, user can click on these comment to see detail, including complete text of the comment, the year reviewer took the course, ratings(hardness, usefulness and interest) he gave, name of professor who taught the course, and the date review posted this comment. Once finished reading, user may click top left corner button (named as course code) to go back.
@@ -50,12 +54,19 @@ Once clicked, user will be brought to Add Review Page. There are 6 fields that u
 
 #### Note: as a protection mechanism on UTCR Website, user from each IP can only submit ONE review to a course. Second time of review post won't be allowed.
 
+![Alt text](/Screenshots/IMG_0025.PNG?raw=true "Course Review Page")
+
 ### Step 3.3: Click on Favorite Button
 From course review page (Step 3), user can add this course to favorite list, simply click the "Favorite" button. Once completed, "Favorite" button will be disabled for this course.
+
+![Alt text](/Screenshots/IMG_0026.PNG?raw=true "Course Review Page")
+![Alt text](/Screenshots/IMG_0027.PNG?raw=true "Course Review Page")
 
 ### Favorite Tab
 At any time of search period (step 1 -> Step 3), user can always go to Favorite Tab and check what's been saved to their local device. The each row of favorite list contains complete course code and course name. If user no longer need a course and wish to remove it from the favorite list, simply swipe to delete.
 #### Note: Course saved in Favorite Tab are presist data, meaning it won't be cleared when user closed the app or device shut down. However, data will disappear if user uninstalled and reinstall the app on device. (Or Clean and Re-build the app on simulator)
+
+![Alt text](/Screenshots/IMG_0028.PNG?raw=true "Course Review Page")
 
 ## Credit
 UTCR iOS App is designed and developed by Rey Li.
